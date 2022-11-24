@@ -21,7 +21,7 @@ class FifthViewController: UIViewController {
     }
     
     @IBAction func actionButtonSiguiente(_ sender: Any) {
-        let nombres: [String] = ["luis", "gloria", "david", "natalia", " sebas"]
+        let nombres: [String] = ["luis", "gloria", "david", "natalia", "rocky"]
         contador = contador + 1
         if contador == 1 {
             nombresLabel.text = nombres[0]
