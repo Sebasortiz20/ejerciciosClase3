@@ -26,8 +26,8 @@ class FirstViewController: UIViewController {
     @IBAction func actionButtonSiguiente(_ sender: Any) {
         contador = contador + 1
         contadorLabel.text = "\(contador)"
-        if contador >= 10 {
-            return contador = 10
+        if contador == 10 {
+            return contador = 0
         }
         
     }

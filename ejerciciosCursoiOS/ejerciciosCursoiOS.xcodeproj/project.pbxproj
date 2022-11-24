@@ -17,6 +17,9 @@
 		FCAAE983292D9F9A00248AFF /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAAE982292D9F9A00248AFF /* ThirdViewController.swift */; };
 		FCAAE985292DBDAD00248AFF /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAAE984292DBDAD00248AFF /* FourthViewController.swift */; };
 		FCAAE987292DC91200248AFF /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAAE986292DC91200248AFF /* FifthViewController.swift */; };
+		FCB1ABD3292FCAA200A0890C /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1ABD2292FCAA200A0890C /* SixthViewController.swift */; };
+		FCB1ABD5292FD22F00A0890C /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1ABD4292FD22F00A0890C /* SeventhViewController.swift */; };
+		FCB1ABD7292FD92F00A0890C /* EighthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1ABD6292FD92F00A0890C /* EighthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		FCAAE982292D9F9A00248AFF /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		FCAAE984292DBDAD00248AFF /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		FCAAE986292DC91200248AFF /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		FCB1ABD2292FCAA200A0890C /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		FCB1ABD4292FD22F00A0890C /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
+		FCB1ABD6292FD92F00A0890C /* EighthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 				FCAAE982292D9F9A00248AFF /* ThirdViewController.swift */,
 				FCAAE984292DBDAD00248AFF /* FourthViewController.swift */,
 				FCAAE986292DC91200248AFF /* FifthViewController.swift */,
+				FCB1ABD2292FCAA200A0890C /* SixthViewController.swift */,
+				FCB1ABD4292FD22F00A0890C /* SeventhViewController.swift */,
+				FCB1ABD6292FD92F00A0890C /* EighthViewController.swift */,
 				FCAAE96B292D615100248AFF /* Main.storyboard */,
 				FCAAE96E292D615300248AFF /* Assets.xcassets */,
 				FCAAE970292D615300248AFF /* LaunchScreen.storyboard */,
@@ -152,7 +161,10 @@
 			files = (
 				FCAAE985292DBDAD00248AFF /* FourthViewController.swift in Sources */,
 				FCAAE981292D936D00248AFF /* SecondViewController.swift in Sources */,
+				FCB1ABD5292FD22F00A0890C /* SeventhViewController.swift in Sources */,
 				FCAAE96A292D615100248AFF /* FirstViewController.swift in Sources */,
+				FCB1ABD3292FCAA200A0890C /* SixthViewController.swift in Sources */,
+				FCB1ABD7292FD92F00A0890C /* EighthViewController.swift in Sources */,
 				FCAAE983292D9F9A00248AFF /* ThirdViewController.swift in Sources */,
 				FCAAE966292D615100248AFF /* AppDelegate.swift in Sources */,
 				FCAAE968292D615100248AFF /* SceneDelegate.swift in Sources */,
