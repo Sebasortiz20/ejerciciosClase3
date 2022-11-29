@@ -9,25 +9,28 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    
     @IBOutlet weak var contadorLabel: UILabel!
     
-    var contador = 10
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    struct Constant {
+        static let counterInitialValue = 10
+        static let counterFinalValue = 0
     }
     
+    var contador = Constant.counterInitialValue
     
     @IBAction func actionButtonSiguiente(_ sender: Any) {
-        contador = contador - 1
-        contadorLabel.text = "\(contador)"
-        if contador <= 0 {
-            return contador = 1
-        }
-        
+        updateCounter()
+        presentCounter()
     }
     
+    func updateCounter () {
+        if contador <= Constant.counterFinalValue {
+            return
+        }
+        contador = contador - 1
+    }
+    
+    func presentCounter () {
+        contadorLabel.text = "\(contador)"
+    }
 }

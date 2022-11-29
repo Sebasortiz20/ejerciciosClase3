@@ -4,31 +4,35 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    // Outlets:
-    
     @IBOutlet weak var contadorLabel: UILabel!
     @IBOutlet weak var siguienteButton: UIButton!
     
-    var contador = 1
+    struct Constant {
+        static let counterInitialValue = 1
+        static let counterFinalValue = 11
+    }
     
+    var contador = Constant.counterInitialValue
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-     // caracteristicas:
-        
         siguienteButton.backgroundColor = .black
-        
     }
     
-    // Actions:
-    
     @IBAction func actionButtonSiguiente(_ sender: Any) {
-        contador = contador + 1
+        updateCounter()
+        presentCounter()
+    }
+    
+    func presentCounter () {
         contadorLabel.text = "\(contador)"
-        if contador == 10 {
-            return contador = 0
-        }
+    }
+    
+    func updateCounter () {
+        contador = contador + 1
         
+        if contador == Constant.counterFinalValue {
+            contador = 1
+        }
     }
 }

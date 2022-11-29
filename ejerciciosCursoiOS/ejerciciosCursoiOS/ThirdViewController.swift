@@ -12,24 +12,34 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var contadorLabel: UILabel!
     @IBOutlet weak var buttonSiguiente: UIButton!
     
-    // var numeroAleatorio = Int.random(in: 1 ... 10) no me funciono solo me generaba un solo numero random
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    struct Constant {
+        static let bingoRandomNumber = 7
     }
+    
+    var numeroAleatorio = 0
     
     @IBAction func actionButtonSiguiente(_ sender: Any) {
-        let numeroAleatorio = Int.random(in: 1 ... 10)
-        contadorLabel.text = "\(numeroAleatorio)"
-        if numeroAleatorio == 7 {
-                buttonSiguiente.setTitle("BINGO!", for: .normal)
-                buttonSiguiente.isEnabled = false
-            }
-        }
+        presentCounter()
+        inspectNumberBingo()
     }
     
-
+    func presentCounter () {
+        numeroAleatorio = Int.random(in: 1 ... 10)
+        contadorLabel.text = "\(numeroAleatorio)"
+    }
+    
+    func updateLabelButton () {
+        buttonSiguiente.setTitle("BINGO!", for: .normal)
+    }
+    
+    func disableButton () {
+        buttonSiguiente.isEnabled = false
+    }
+    
+    func inspectNumberBingo () {
+        if numeroAleatorio == Constant.bingoRandomNumber {
+            updateLabelButton()
+            disableButton()
+        }
+    }
+}

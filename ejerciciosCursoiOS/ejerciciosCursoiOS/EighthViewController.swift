@@ -8,28 +8,45 @@
 import UIKit
 
 class EighthViewController: UIViewController {
-
+    
     @IBOutlet weak var numeroLabel: UILabel!
     @IBOutlet weak var imagenLabelImage: UIImageView!
     @IBOutlet weak var buttonSiguiente: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    struct Constant {
+        static let numberExplosion = 9
     }
+    
+    var numeroAleatorio = 0
     
     @IBAction func actionButtonSiguiente(_ sender: Any) {
-        
-        let numeroAleatorio = Int.random(in: 1 ... 10)
-        numeroLabel.text = "\(numeroAleatorio)"
-        if numeroAleatorio == 9 {
-            imagenLabelImage.image = UIImage(named: "Explosion")
-            buttonSiguiente.isHidden = true
-            numeroLabel.isHidden = true
-        }
-        
+        presentCounter()
+        validateImageExplosion()
     }
-        
-}
     
+    func presentImageExplosion () {
+        imagenLabelImage.image = UIImage(named: "Explosion")
+    }
+    
+    func hideButton () {
+        buttonSiguiente.isHidden = true
+    }
+    
+    func hideNumberLabel () {
+        numeroLabel.isHidden = true
+    }
+    
+    func presentCounter () {
+        numeroLabel.text = "\(numeroAleatorio)"
+    }
+    
+    func validateImageExplosion () {
+        numeroAleatorio = Int.random(in: 1 ... 10)
+        if numeroAleatorio == Constant.numberExplosion {
+            presentImageExplosion()
+            hideButton()
+            hideNumberLabel()
+        }
+    }
+}
+

@@ -8,27 +8,36 @@
 import UIKit
 
 class FourthViewController: UIViewController {
+    
     @IBOutlet weak var contadorLabel: UILabel!
     @IBOutlet weak var caraFelizImage: UIImageView!
     @IBOutlet weak var buttonSiguiente: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var numeroAleatorio = 0
     
     @IBAction func actionButtonSiguiente(_ sender: Any) {
-        let numeroAleatorio = Int.random(in: 1 ... 10)
-        contadorLabel.text = "\(numeroAleatorio)"
-        if (numeroAleatorio / 2) * 2 == numeroAleatorio {
-            caraFelizImage.image = UIImage(named: "caraTriste")
-            
-        }else {
-            caraFelizImage.image = UIImage(named: "caraFeliz")
-            
-        }
-        
+        validateImage()
+        presentCounterLabel()
     }
     
+    func presentHappyFace () {
+        caraFelizImage.image = UIImage(named: "caraFeliz")
+    }
+    
+    func presentSadFace () {
+        caraFelizImage.image = UIImage(named: "caraTriste")
+    }
+    
+    func  presentCounterLabel () {
+        contadorLabel.text = "\(numeroAleatorio)"
+    }
+    
+    func validateImage () {
+        numeroAleatorio = Int.random(in: 1 ... 10)
+        if (numeroAleatorio % 2) == 0 {
+            presentHappyFace()
+        } else {
+            presentSadFace()
+        }
+    }
 }
